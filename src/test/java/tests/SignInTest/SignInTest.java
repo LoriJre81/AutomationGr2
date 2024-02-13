@@ -20,7 +20,7 @@ public class SignInTest extends BaseTest {
         signInPage.clickSignInButton();
 
         LOG.info("Verify is logo is displayed");
-        Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
+        Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed") ;
 
 
     }

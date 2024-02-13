@@ -20,7 +20,8 @@ public class BaseTest {
 }
  @AfterSuite
     public void tearDown(){
-    BasePage.tearDown();
+    BasePage.tearDown()  ;
+
 
 
  }
