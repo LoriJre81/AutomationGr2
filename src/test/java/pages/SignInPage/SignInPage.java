@@ -21,23 +21,33 @@ public class SignInPage extends BasePage {
     }
 
     private By signInButton=By.id("btn1") ;
+    private By logo=By.id("logo") ;
+    private By emailField= By.xpath("//input[@ng-model='Email']") ;
+    private By paswordfield=By.xpath("//input[@ng-model='password']") ;
+
 
     public void clickSignInButton(){
-        LOG.info("Click Sign in button") ;
+        LOG.info("Click 'Sign In Button' ") ;
+
         driver.findElement(signInButton).click() ;
 
 
 
     }
 
-    public boolean isSignINButtonDisplayed(){
-        LOG.info("Verify if Sign in button is displayed") ;
-        return driver.findElement(signInButton).isDisplayed() ;
+    public boolean isSignINButtonDisplayed() {
+        LOG.info("Verify if 'Sign In Button'is displayed");
+        return driver.findElement(signInButton).isDisplayed();
+    }
 
+        public boolean isLogoDisplayed(){
+            LOG.info("Verify if Logo image is displayed");
+            return driver.findElement(logo).isDisplayed() ;
 
+        }
 
 
     }
 
 
-}
+

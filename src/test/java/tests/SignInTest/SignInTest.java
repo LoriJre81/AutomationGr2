@@ -1,4 +1,29 @@
 package tests.SignInTest;
 
-public class SignInTest {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import tests.BaseTest;
+
+public class SignInTest extends BaseTest {
+    public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
+
+
+    @Test
+    public void SignIn() {
+
+        LOG.info("Check Sign in button");
+        Assert.assertTrue(signInPage.isSignINButtonDisplayed(), "Button is not diplayed");
+
+        LOG.info("Click  Sign in button");
+        signInPage.clickSignInButton();
+
+        LOG.info("Verify is logo is displayed");
+        Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
+
+
+    }
+
+
 }
