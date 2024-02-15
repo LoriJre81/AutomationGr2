@@ -42,7 +42,7 @@ public class SignInTest extends BaseTest {
         signInPage.clickBack();
 
 
-        LOG.info("Click Skip sign in button") ;
+        LOG.info("Click Skip sign in button")  ;
         signInPage.clickSkipSignInButton();
 
 

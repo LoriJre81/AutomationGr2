@@ -75,7 +75,7 @@ public class SignInPage extends BasePage {
 
     public void clickBack(){
         LOG.info("Click back in browser");
-        driver.navigate().back();
+        driver.navigate().back() ;
 
 
     }

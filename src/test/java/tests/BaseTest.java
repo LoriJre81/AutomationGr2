@@ -7,7 +7,7 @@ import pages.SignInPage.SignInPage;
 
 
 public class BaseTest {
-    public SignInPage signInPage=SignInPage.getInstance() ;
+    public SignInPage signInPage=SignInPage.getInstance();
 
 
 

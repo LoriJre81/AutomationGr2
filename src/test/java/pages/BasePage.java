@@ -22,6 +22,7 @@ public class BasePage {
         driver.manage().window().maximize();
 
 
+
     }
 
 
