@@ -22,7 +22,6 @@ public class BasePage {
         driver.manage().window().maximize();
 
 
-
     }
 
 
@@ -48,5 +47,16 @@ public class BasePage {
 
     }
 
+   // public static void sleep(long ms) {
+    //    try {
+      //      Thread.sleep(ms);
+    //    } catch (InterruptedException e) {
+     //       e.printStackTrace();
+        }
 
-}
+
+
+
+
+
+
