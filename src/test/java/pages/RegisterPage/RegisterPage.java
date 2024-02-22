@@ -28,6 +28,10 @@ public class RegisterPage extends BasePage {
     private By inputFirstName = By.xpath("//input[@ng-model='FirstName']");
 
     private By inputLastName = By.xpath("//input[@ng-model='LastName']");
+    private By clickConsentButton = By.xpath("//p[text()='Consent']");
+    private By inputAdress = By.xpath("//textarea[@ng-model='Adress']");
+    private By inputEmail = By.xpath("//input[@type='email']");
+    private By insertPhoneNumber=By.xpath("//input[@ng-model='Phone']") ;
 
 
     public void insertFullName(String fName, String lName) {
@@ -38,7 +42,39 @@ public class RegisterPage extends BasePage {
     }
 
 
+    public void clickConsentButton() {
+        LOG.info("Click 'Consent'button");
+        driver.findElement(clickConsentButton).click();
+
+
+    }
+
+    public void insertAddress(String address) {
+        LOG.info("Insert address");
+        driver.findElement(inputAdress).sendKeys(address);
+
+    }
+
+    public void insertEmail(String email) {
+        LOG.info("Insert email ");
+        driver.findElement(inputEmail).sendKeys(email);
+
+    }
+
+    public void insertPhoneNumber(String phone) {
+        LOG.info("Insert phone number");
+        driver.findElement(insertPhoneNumber).sendKeys(phone);
+
+
+    }
+
+
 }
+
+
+
+
+
 
 
 

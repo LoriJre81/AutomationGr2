@@ -5,42 +5,52 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static java.lang.Thread.sleep;
-import static pages.BasePage.* ;
+import static pages.BasePage.*;
 
 
-public class RegisterTest extends BaseTest{
+public class RegisterTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
-    private String newUrl=getBaseURL()+"Register.html" ;
+    private String newUrl = getBaseURL() + "Register.html";
 
-    String firstName="Ion" ;
-    String lastName="Popescu" ;
+    String firstName = "Ion";
+    String lastName = "Popescu";
+    String address="Cluj,strada Ion Barbu ,nr456" ;
+    String email="automation@gmail.com" ;
+    String phone="123456789" ;
 
 
 
     @Test
-    public void fillRegister(){
+    public void fillRegister() {
 
-        driver.get(newUrl) ;
-        try {
-            sleep(3000L) ;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        driver.get(newUrl);
+        sleep(5000L);
+        LOG.info("Click 'Consent' button");
+        registerPage.clickConsentButton();
 
-
-        LOG.info("Typing full name") ;
-        registerPage.insertFullName(firstName,lastName) ;
+        LOG.info("Typing full name");
+        registerPage.insertFullName(firstName, lastName);
 
 
+        LOG.info("Type in Address");
+        registerPage.insertAddress(address) ;
 
+
+        LOG.info("Type in email");
+        registerPage.insertEmail(email);
+
+        LOG.info("Type in phone number") ;
+        registerPage.insertPhoneNumber(phone) ;
 
 
 
     }
 
 
+}
 
 
 
-    }
+
+
+
