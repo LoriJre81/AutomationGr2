@@ -17,6 +17,13 @@ public class RegisterTest extends BaseTest {
     String address="Cluj,strada Ion Barbu ,nr456" ;
     String email="automation@gmail.com" ;
     String phone="123456789" ;
+    String language = "English";
+    String skill = "Java";
+    String country = "India";
+    String year = "1991";
+    String month = "February";
+    String day = "29";
+
 
 
 
@@ -43,11 +50,36 @@ public class RegisterTest extends BaseTest {
         registerPage.insertPhoneNumber(phone) ;
 
 
+        LOG.info("Select Gender");
+        registerPage.setMaleGender();
+        registerPage.setFemaleGender();
+        LOG.info("Select Hobbies");
+        registerPage.clickCricket();
+        registerPage.clickMovies();
+        registerPage.clickHockey();
+
+        LOG.info("Select language");
+        registerPage.selectLanguage(language);
+
+        LOG.info("Select skill");
+        registerPage.selectSkills(skill);
+
+        LOG.info("Select Country");
+        registerPage.selectCountry(country);
+
+        LOG.info("Select date of birth");
+        registerPage.setDateOfBirth(year, month, day);
+
+        sleep(5000L);
+    }
+
+
+
 
     }
 
 
-}
+
 
 
 
